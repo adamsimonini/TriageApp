@@ -1,0 +1,224 @@
+.dropHeader{
+  color: #9ec746;
+}
+#masterContainer{
+  background-color: red;
+  padding: 0.5vw 1% 0.5vw 1% !important;
+  margin: 0 auto;
+}
+#masterRow{
+  padding: 0.5vw 1% 0.5vw 1% !important;
+}
+body{
+  font-size: calc(10px + 0.5vw);
+}
+#altTitle{
+  font-size: calc(15px + 1.5vw);
+  padding: 2.5vw 0 2.5vw 0;
+}
+.altLabel{
+  padding: 0.5vw 0 0.5vw 0;
+}
+#altInputBox{
+  background-color: #f0eef0;
+  padding: 2% 0% 2% 0%;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 62px -9px rgba(0,0,0,0.58);
+  -moz-box-shadow: 0px 0px 62px -9px rgba(0,0,0,0.58);
+  box-shadow: 0px 0px 62px -9px rgba(0,0,0,0.58);
+}
+.row{
+  padding: 0.5vw 10% 0.5vw 10%;
+}
+.regPatient{
+  width: 100%;
+  font-size: calc(20px + 1vw);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.registerDropDown{
+  width: 100%;
+  height: 50% !important;
+  font-size: calc(10px + 1vw);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.modalDialog {
+    overflow-y: auto;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 3% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff !important;
+}
+.modalClose {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: 0px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.modalClose:hover {
+    background: #00d9ff;
+}
+.modalDialog {
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(225, 225, 225, 0);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+}
+.modalClose {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.modalClose:hover {
+  background: #c2041a;
+}
+.setUpFileRolls {
+margin: 2%;
+}
+.setUpFileRolls ul li{
+margin-left: 5%;
+list-style: circle;
+}
+/*BUTTON ANIMATED EFFECT*/
+.draw-border {
+margin: 4% 0 3% 0;
+background-color: #9ec746 !important;
+width: 50%;
+border-radius: 20px;
+box-shadow: inset 0 0 0 4px #fff;
+color: #fff;
+transition: color 0.25s 0.08333s;
+position: relative;
+}
+.draw-border::before, .draw-border::after {
+border: 0 solid transparent;
+box-sizing: border-box;
+content: '';
+pointer-events: none;
+position: absolute;
+width: 0;
+height: 0;
+bottom: 0;
+right: 0;
+}
+.draw-border::before {
+border-bottom-width: 4px;
+border-left-width: 4px;
+}
+.draw-border::after {
+border-top-width: 4px;
+border-right-width: 4px;
+}
+.draw-border:hover {
+color: #9ec746;
+background-color: #fff !important;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+border-color: #9ec746;
+transition: border-color 0s, width 0.25s, height 0.25s;
+width: 100%;
+height: 100%;
+}
+.draw-border:hover::before {
+transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+transition-delay: 0s, 0.25s, 0s;
+}
+.btn {
+background: none;
+border: none;
+cursor: pointer;
+line-height: 1.5;
+font: 700 1.2rem 'Monserrat', sans-serif;
+padding: 1em 2em;
+letter-spacing: 0.05rem;
+}
+.btn:focus {
+outline: none;
+}
+#widthDiv{
+width: 60%;
+margin-top: 10px;
+}
+/*PHONES ONLY*/
+@media only screen and (max-width: 767px) {
+#widthDiv{
+  width: 80%;
+}
+#altSubmit{
+  font-size: 14px;
+  min-width: 140%;
+}

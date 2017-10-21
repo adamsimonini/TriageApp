@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title> Triage </title>
+    <link rel="icon" href="images.heartbeat.svg" type="image/x-icon">
+
+    <!-- JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Custom JS -->
+    <script src="src.js"></script>
+
+    <!-- BOOTSTRAP START-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" src_type="url"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <!-- BOOTSTRAP END-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
+    <!-- BOOTSTRAP TOGGLE -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <!-- CUSTOM MOBILE CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 offset-sm-2 text-right">
+            <h1>Triage Automation</h1>
+        </div>
+        <div class="col-sm-2 text-left">
+          <a href="#modal"><img style="max-width: 60px" src="images/plus.svg"/></a>
+        </div>
+      </div>
+    </div>
+
+  <div id="masterContainer" class="row text-center"> <!-- MASTER CONTAINER START -->
+    <div class="col-sm-12">
+      <div id="masterRow" class="row" style="margin: 0">
+        <div class="col-sm-2 categoryCol">
+          A
+        </div>
+        <div class="col-sm-2 categoryCol">
+          B
+        </div>
+        <div class="col-sm-2 categoryCol">
+          C
+        </div>
+        <div class="col-sm-2 categoryCol">
+          D
+        </div>
+        <div class="col-sm-2 categoryCol">
+          E
+        </div>
+        <div class="col-sm-2 categoryCol">
+          F
+        </div>
+      </div>
+    </div>
+  </div> <!-- MASTER CONTAINER END -->
+
+    <div id="modal" class="modalDialog modalList fixed-top">
+      <div id="widthDiv" style="width: 90%">
+        <a id="modalCloseBtn" href="#close" title="Close" class="modalClose">X</a>
+        <div style="margin: 0 5% 0 5%" class="">
+          <!-- Logo & Sign In-->
+          <div style="padding: 0" class="row text-center">
+            <div class="col-md-2 offset-md-5 col-sm-12">
+            </div>
+          </div>
+          <div style="padding:0" class="row">
+            <div class="col-sm-12 text-center">
+              <h4 id="altTitle"><span style="font-weight: 900">EMERGENCY</span><strong><span style="color: #9ec746"> TRIAGE </span></strong>AUTOMATION</h4>
+            </div>
+          </div>
+          <div id="altInputBox">  <!-- Input Fields Start-->
+            <div class="row">
+              <div class="col-sm-12">
+                <h4 class="altLabel">FULL NAME</h4>
+                <input id="name" class="regPatient"/>
+              </div>
+            </div> <!-- Full Name Row End-->
+            <div class="row">
+              <div class="col-sm-5">
+                <h4 class="altLabel text-center">GENDER</h4>
+                <label class="checkbox text-center">
+                  <input style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
+                </label>
+            </label>
+              </div> <!-- Gender End-->
+              <div class="col-sm-2"></div>
+              <div class="col-sm-5">
+                <h4 class="altLabel">AGE</h4>
+                <input id="phone" type="number" value="40" class="regPatient"/>
+              </div>
+            </div> <!-- Age-->
+            <div class="row">
+              <div class="col-sm-12">
+                <h4 class="altLabel">PRE-EXISTING CONDITIONS</h4>
+                <input id="notes" class="regPatient"/>
+              </div>
+            </div> <!-- Conditions-->
+            <div class="row">
+              <div class="col-sm-12">
+                <h4 id="website" class="altLabel">NOTES</h4>
+                <input class="regPatient"/>
+              </div>
+            </div> <!-- Notes-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label class="altLabel">CONDITION CATEGORY</label>
+                  <select class="form-control registerDropDown" id="">
+                    <option style="font-weight: 900" selected="selected" disabled></option>
+                      <option class="dropHeader" style="font-weight: 900;" disabled>SURGERY</option>
+                        <option value="General Surgery" class="subOption">General Surgery</option>
+                        <option value="Suicidal Ideology" class="subOption">Neurosurgery</option>
+                        <option value="Dental" class="subOption">Dental</option>
+                      <option class="dropHeader" style="font-weight: 900" disabled>CARDIOLOGY</option>
+                        <option value="Graphic Art Magazine" class="subOption">Cardiac Arrest</option>
+                        <option value="PrintAction Magazine" class="subOption">Chest Pain</option>
+                      <option class="dropHeader" style="font-weight: 900" disabled>PSYCHOLOGY</option>
+                        <option value="Hallucinations" class="subOption">Hallucinations</option>
+                        <option value="Suicidal Ideology" class="subOption">Suicidal Ideology</option>
+                        <option value="Schizophrenia" class="subOption">Schizophrenia</option>
+                        <!-- <option value="Asphyxiation" class="subOption">Asphyxiation</option>
+                        <option value="SOB" class="subOption">Shortness of Breath</option> -->
+                        <!-- <option value="Caugh" class="subOption">Caugh</option> -->
+                      <option class="dropHeader" style="font-weight: 900" disabled>ORTHOPEDICS</option>
+                          <option value="BloodLoss" class="subOption">Bone fracture</option>
+                          <option value="Lasseration" class="subOption">Fractured skull</option>
+                  </select>
+                </div>
+              </div>
+            </div> <!-- How did you hear about us end -->
+            <div class="row">
+              <div class="col-sm-12 text-center">
+              </div>
+            </div> <!-- How did you hear about us end -->
+          </div><!-- Input Fields End -->
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-12 text-center">
+                <button id="altSubmit" class="btn draw-border">SUBMIT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let rawName = $("#fullName");
+      rawName.focusout(function(){
+        let nameArray = rawName.val().split(" ");
+        if (nameArray.length < 2){
+          alert("Please input both you first & last name.")
+        }
+        let first = nameArray[0]
+      });
+
+      // let radio = 1;
+      // $("#radioButton").on("click", function(){
+      //   if($(this).val) == radio){
+      //     $(this).prop('checked', false);
+      //     radio = 0;
+      //   }else{
+      //     $(this).prop('checked', true);
+      //     radio = 1;
+      //   }
+      // });
+    </script>
+  </body>
+</html>
