@@ -1,6 +1,9 @@
 .dropHeader{
   color: #9ec746;
 }
+.doctorIcon{
+  max-width: 20px;
+}
 #masterContainer{
   background-color: red;
   padding: 0.5vw 1% 0.5vw 1% !important;
