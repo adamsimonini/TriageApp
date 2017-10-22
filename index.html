@@ -44,7 +44,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 offset-sm-2 text-right">
-            <h1>Triage Automation</h1>
+            <h1>Triage Assistant</h1>
         </div>
         <div class="col-sm-2 text-left">
           <a href="#modal"><img style="max-width: 60px" src="images/plus.svg"/></a>
@@ -56,7 +56,7 @@
     <div class="col-sm-12">
       <div id="masterRow" class="row" style="margin: 0"> <!-- MASTER ROW -->
         <div class="col-lg-2 categoryCol">
-          <h4 style="min-height: 30px">SURGERY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">SURGERY</h4>
           <div class="row text-center"> <!-- surgery doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Hart</div>
@@ -65,14 +65,48 @@
 
             </div>
             <div class="row patientQueue"> <!-- patient -->
-              <!-- <div class="col-sm-1">9</div>
-              <div class="col-sm-5">RED</div>
-              <div class="col-sm-2">17:51</div> -->
+              <div class="block">
+                <div>
+                  <input type="radio" name="item" id="item-one" hidden />
+                  <label for="item-one"><p class="priorityNumber">8</p><p class="lastName"> Anderson </p><span class="minutes"></span>:<span class="seconds"></span></label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-two" hidden />
+                  <label for="item-two">Item 2</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-three" hidden />
+                  <label for="item-three">Item 3</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-four" hidden />
+                  <label for="item-four">Item 4</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-five" hidden />
+                  <label for="item-five">Item 5</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 style="min-height: 30px">CARDIOLOGY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">CARDIOLOGY</h4>
           <div class="row text-center"> <!-- cardiology doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Baker</div>
@@ -80,7 +114,7 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 style="min-height: 30px">NEUROLOGY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">NEUROLOGY</h4>
           <div class="row text-center"> <!-- neurology doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. McCloud</div>
@@ -88,7 +122,7 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 style="min-height: 30px">PSYCHIATRY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">PSYCHIATRY</h4>
           <div class="row text-center"> <!-- psychiatry doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Dalmia</div>
@@ -96,7 +130,7 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 style="min-height: 30px">ORTHOPAEDICS</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">ORTHOPAEDICS</h4>
           <div class="row text-center"> <!-- orthopaedic doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Andwerson</div>
@@ -104,7 +138,7 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 style="min-height: 30px">PULMONOLOGY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">PULMONOLOGY</h4>
           <div class="row text-center"> <!-- pulmonology doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Rizzuti</div>
@@ -133,7 +167,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <h4 class="altLabel">FULL NAME</h4>
-                <input id="name" class="regPatient"/>
+                <input id="name" class="text-center regPatient"/>
               </div>
             </div> <!-- Full Name Row End-->
             <div class="row">
@@ -147,7 +181,7 @@
               <div class="col-sm-2"></div>
               <div class="col-sm-5">
                 <h4 class="altLabel">AGE</h4>
-                <input id="phone" type="number" value="40" class="regPatient"/>
+                <input id="phone" type="number" value="40" class="text-center regPatient"/>
               </div>
             </div> <!-- Age-->
             <div class="row">
@@ -159,7 +193,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <h4 id="website" class="altLabel">NOTES</h4>
-                <input class="regPatient"/>
+                <input class="text-center regPatient"/>
               </div>
             </div> <!-- Notes-->
             <div class="row">
@@ -227,45 +261,6 @@
       //   }
       // });
     </script>
-
-    <div class="block">
-      <div>
-        <input type="radio" name="item" id="item-one" checked hidden />
-        <label for="item-one">Item 1</label>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
-        </div>
-      </div>
-      <div>
-        <input type="radio" name="item" id="item-two" hidden />
-        <label for="item-two">Item 2</label>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
-        </div>
-      </div>
-      <div>
-        <input type="radio" name="item" id="item-three" hidden />
-        <label for="item-three">Item 3</label>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
-        </div>
-      </div>
-      <div>
-        <input type="radio" name="item" id="item-four" hidden />
-        <label for="item-four">Item 4</label>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
-        </div>
-      </div>
-      <div>
-        <input type="radio" name="item" id="item-five" hidden />
-        <label for="item-five">Item 5</label>
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
-        </div>
-      </div>
-    </div>
-
     <style>
       /* Variables */
       /* Styles */
@@ -314,71 +309,7 @@
         background-color: #e6e6e6;
         color: black;
       }
-      .block > div:nth-child(1):before {
-        content: "1";
-        width: 20px;
-        font-weight: bold;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #466970;
-        padding: 7.5px;
-        margin: 0;
-        color: white;
-      }
-      .block > div:nth-child(2):before {
-        content: "2";
-        width: 20px;
-        font-weight: bold;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #466970;
-        padding: 7.5px;
-        margin: 0;
-        color: white;
-      }
-      .block > div:nth-child(3):before {
-        content: "3";
-        width: 20px;
-        font-weight: bold;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #466970;
-        padding: 7.5px;
-        margin: 0;
-        color: white;
-      }
-      .block > div:nth-child(4):before {
-        content: "4";
-        width: 20px;
-        font-weight: bold;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #466970;
-        padding: 7.5px;
-        margin: 0;
-        color: white;
-      }
-      .block > div:nth-child(5):before {
-        content: "5";
-        width: 20px;
-        font-weight: bold;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #466970;
-        padding: 7.5px;
-        margin: 0;
-        color: white;
-      }
+
       .block > div input + label {
         cursor: pointer;
         display: block;

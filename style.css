@@ -1,5 +1,19 @@
-
+label p{
+  margin: 0;
+  width: 30%;
+  display: inline;
+}
+.block div{
+  padding: 0 !important;
+}
+.block{
+  padding: 0 !important;
+}
+.medicalSpecialty{
+  font-size: calc(20px + 0.1vw);
+}
 .patientQueue{
+  padding: 0 !important;
   border: 3px solid Purple;
 }
 .categoryCol{
