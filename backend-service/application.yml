@@ -25,9 +25,9 @@ spring:
     jpa:
         generate-ddl: true
     datasource:
-        url: jdbc:postgresql://localhost:5432/bsa
-        username: bowei
-        password: password
+        url: jdbc:postgresql://localhost:5432/triage_db
+        username: triage
+        password: 1234567890
         maxActive: 10
         maxIdle: 5
         minIdle: 2
