@@ -31,7 +31,6 @@ $(document).ready(function(){
         let placement1 = $("input[name='optradio']:checked");
         let placement = placement1.val();
 
-        alert(placement);
         function generatePatient(){
           let patient = [];
           patient[0] = $("#inputPriority").val()
@@ -43,12 +42,49 @@ $(document).ready(function(){
           patient[6] = $("#inputNotes").val();
           return(patient);
         }
-        let patient = generatePatient();
+        let patientArray = generatePatient();
 
-        function generatePatientDiv(){
-          $("<p>Test</p>").appendTo(document.getElementById(placement));
+        function generatePatientDiv(patient){
+          let patientDiv =
+            $('<div/>', {
+                id: patient[1] + patient[3] + "Div",
+                html: patient[6]
+            });
+          let patientInput =
+            $('<input/>', {
+                id: patient[1] + patient[3] + "Input",
+                type: "radio",
+                name: "item",
+                id: "item-5"
+            });
+          let patientNotes =
+            $('<div/>', {
+                id: patient[1] + patient[3] + "Input",
+                type: "radio",
+                name: "item",
+                html:
+            });
+            // <div>
+            //   <input type="radio" name="item" id="item-one" hidden />
+            //   <label for="item-one"><p class="priorityNumber">8</p><p class="lastName"> Anderson </p><span class="minutes"></span>:<span class="seconds"></span></label>
+            //   <div>
+            //     <p>In for back pain. Has type-2 diabetes</p>
+            //   </div>
+            // </div>
+
+          patientDiv.appendTo(document.getElementById(placement));
+          patientInput.appendTo(document.getElementById(patient[1] + patient[3]));
         }
-        generatePatientDiv();
+
+        // <div>
+        //   <input type='radio' name='item' id='item-one' hidden />
+        //   <label for="item-one"><p class='priorityNumber'>8</p><p class="lastName"> Anderson </p><span class="minutes"></span>:<span class="seconds"></span></label>
+        //   <div>
+        //     <p>In for back pain. Has type-2 diabetes</p>
+        //   </div>
+        // </div>
+
+        generatePatientDiv(patientArray);
         // $("body").append(newPatient(patient));
       });
 });
