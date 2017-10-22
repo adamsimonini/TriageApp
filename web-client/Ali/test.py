@@ -30,18 +30,18 @@ class patient:
 ##        self.value = assignValue(conditoinValue, age, pregnancy, elapsedTimeSinceDisease)
         
      #finds the priority value of the patient 
-        def assignValue(conditoinValue, age, pregnancy):
-            if (age < 5 or age >= 60):
+        def assignValue():
+            if (self.age < 5 or self.age >= 60):
                 ageValue = 2
-            elif (age < 16 or 41 < age < 60):
+            elif (self.age < 16 or 41 < self.age < 60):
                 ageValue = 1
             else :
                 ageValue = 0
     
-            if (pregnancy > 9):
+            if (self.pregnancy > 9):
                 pregnancyValue = 9
             
-            value = conditionValue * 100 + agevalue +  pregnancyValue
+            value = self.conditionValue * 100 + agevalue +  pregnancyValue
             return value
 
 
@@ -54,3 +54,32 @@ billy = patient ("Billy Bill", 22, "M", "COLD", 2, 0)
 patient.patientNum += 1
 print(ali.age + patient.patientNum)
 print (billy.name ,  billy.age, billy.condition)
+patients = []
+
+
+def newPatient():
+    global patients
+    print ("New patient: ")
+    print("Enter name")
+    name  = str(input())
+    print("enter age")
+    age = input()
+    print("Enter gender")
+    gender  = str(input())
+    print("Enter condition")
+    condition  = str(input())
+    print("enter condition value")
+    conditionValue = input()
+    print("enter pregnancy")
+    pregnancy = input()
+    newAdd = patient(name, age, gender, condition, conditionValue, pregnancy)
+    patients.append(newAdd)
+    print("patient successfully added." , "Patient value is", patients[len(patients)-1].assignValue() )
+
+
+newPatient()
+print(patients[0].name)
+
+
+
+
