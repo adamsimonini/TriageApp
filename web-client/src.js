@@ -28,6 +28,10 @@ $(document).ready(function(){
       }
 
       $("#submitBtn").click(function(){
+        let placement1 = $("input[name='optradio']:checked");
+        let placement = placement1.val();
+
+        alert(placement);
         function generatePatient(){
           let patient = [];
           patient[0] = $("#inputPriority").val()
@@ -37,17 +41,14 @@ $(document).ready(function(){
           patient[4] = $("#inputConditions").val();
           patient[5] = $("#inputSymptom").val();
           patient[6] = $("#inputNotes").val();
-
-          alert($("#inputSymptom").closest().attr('id'));
-
           return(patient);
         }
         let patient = generatePatient();
 
         function generatePatientDiv(){
-
+          $("<p>Test</p>").appendTo(document.getElementById(placement));
         }
-        generatePatientDiv(patient);
+        generatePatientDiv();
         // $("body").append(newPatient(patient));
       });
 });

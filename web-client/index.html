@@ -56,7 +56,7 @@
   <div id="masterContainer" class="row text-center"> <!-- MASTER CONTAINER -->
     <div class="col-sm-12">
       <div id="masterRow" class="row" style="margin: 0"> <!-- MASTER ROW -->
-        <div class="col-lg-2 categoryCol">
+        <div class="col-lg-2 offset-1 categoryCol">
           <h4 class="medicalSpecialty" style="min-height: 30px">SURGERY</h4>
           <div class="row text-center"> <!-- surgery doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
@@ -66,7 +66,7 @@
 
             </div>
             <div class="row patientQueue"> <!-- patient -->
-              <div class="block">
+              <div id="surgery" class="block">
                 <div>
                   <input type="radio" name="item" id="item-one" hidden />
                   <label for="item-one"><p class="priorityNumber">8</p><p class="lastName"> Anderson </p><span class="minutes"></span>:<span class="seconds"></span></label>
@@ -115,7 +115,7 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 class="medicalSpecialty" style="min-height: 30px">NEUROLOGY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">PSYCHIATRY</h4>
           <div class="row text-center"> <!-- neurology doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. McCloud</div>
@@ -123,7 +123,7 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 class="medicalSpecialty" style="min-height: 30px">PSYCHIATRY</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">PULMONOLOGY</h4>
           <div class="row text-center"> <!-- psychiatry doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Dalmia</div>
@@ -131,19 +131,11 @@
           </div>
         </div>
         <div class="col-lg-2 categoryCol">
-          <h4 class="medicalSpecialty" style="min-height: 30px">ORTHOPAEDICS</h4>
+          <h4 class="medicalSpecialty" style="min-height: 30px">OTHER</h4>
           <div class="row text-center"> <!-- orthopaedic doctors -->
             <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
             <div class="col-12">Dr. Andwerson</div>
             <div class="col-12">Dr. Park</div>
-          </div>
-        </div>
-        <div class="col-lg-2 categoryCol">
-          <h4 class="medicalSpecialty" style="min-height: 30px">PULMONOLOGY</h4>
-          <div class="row text-center"> <!-- pulmonology doctors -->
-            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
-            <div class="col-12">Dr. Rizzuti</div>
-            <div class="col-12">Dr. Guy</div>
           </div>
         </div>
       </div>
@@ -237,6 +229,27 @@
                 </div>
               </div>
             </div> <!-- categories end -->
+      <div class="row">
+          <div class="container">
+            <form id="placement">
+              <label class="col-md-2 col-sm-6 radio-inline">
+                <input value="surgery" type="radio" name="optradio">Surgery
+              </label>
+              <label class="col-md-2 col-sm-6 radio-inline">
+                <input value="cardiology" type="radio" name="optradio">Cardiology
+              </label>
+              <label class="col-md-2 col-sm-6 radio-inline">
+                <input value="psychology" type="radio" name="optradio">Psychology
+              </label>
+              <label class="col-md-3 col-sm-6 radio-inline">
+                <input value="pulmonology" type="radio" name="optradio">Pulmonology
+              </label>
+              <label class="col-md-2 col-sm-6 radio-inline">
+                <input value="orthopedics" type="radio" name="optradio">Other
+              </label>
+            </form>
+          </div>
+      </div>
             <div class="row">
               <div class="col-sm-12 text-center">
                 <h4 class="altLabel">PRIORITY OVERRIDE</h4>
