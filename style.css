@@ -124,7 +124,7 @@ body{
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(225, 225, 225, 0);
+  background: rgba(225, 225, 225, 0.95);
   z-index: 99999;
   opacity:0;
   -webkit-transition: opacity 400ms ease-in;
@@ -234,8 +234,9 @@ letter-spacing: 0.05rem;
 outline: none;
 }
 #widthDiv{
-width: 60%;
+width: 80%;
 margin-top: 10px;
+background-color: transparent !important;
 }
 /*PHONES ONLY*/
 @media only screen and (max-width: 767px) {

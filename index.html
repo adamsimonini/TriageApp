@@ -148,7 +148,7 @@
       </div>
     </div>
   </div> <!-- MASTER CONTAINER END -->
-
+<!-- MONDAL START -->
     <div id="modal" class="modalDialog modalList fixed-top">
       <div id="widthDiv" style="width: 90%">
         <a id="modalCloseBtn" href="#close" title="Close" class="modalClose">X</a>
@@ -174,25 +174,34 @@
               <div class="col-sm-5">
                 <h4 class="altLabel text-center">GENDER</h4>
                 <label class="checkbox text-center">
-                  <input style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
+                  <input id="gender" style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
                 </label>
             </label>
               </div> <!-- Gender End-->
               <div class="col-sm-2"></div>
               <div class="col-sm-5">
                 <h4 class="altLabel">AGE</h4>
-                <input id="phone" type="number" value="40" class="text-center regPatient"/>
+                <input id="age" type="number" value="40" class="text-center regPatient"/>
               </div>
             </div> <!-- Age-->
             <div class="row">
               <div class="col-sm-12">
-                <h4 class="altLabel">PRE-EXISTING CONDITIONS</h4>
-                <input id="notes" class="regPatient"/>
+                <div class="form-group">
+                  <label class="altLabel">PRE-EXISTING CONDITION</label>
+                  <select multiple class="text-center form-control registerDropDown" id="">
+                    <option value="Diabetes"      class="subOption">Diabetes</option>
+                    <option value="Hypertension"  class="subOption">Hypertension</option>
+                    <option value="Anxiety"       class="subOption">Anxiety</option>
+                    <option value="Depression"    class="subOption">Depression</option>
+                    <option value="Asthma"        class="subOption">Asthma</option>
+                    <option value="Obesity"       class="subOption">Obesity</option>
+                  </select>
+                </div>
               </div>
             </div> <!-- Conditions-->
             <div class="row">
               <div class="col-sm-12">
-                <h4 id="website" class="altLabel">NOTES</h4>
+                <h4 id="notes" class="altLabel">NOTES</h4>
                 <input class="text-center regPatient"/>
               </div>
             </div> <!-- Notes-->
