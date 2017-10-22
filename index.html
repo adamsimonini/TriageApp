@@ -24,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" src_type="url"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/popper.min.js"></script>
     <!-- BOOTSTRAP END-->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -167,28 +168,28 @@
             <div class="row">
               <div class="col-sm-12">
                 <h4 class="altLabel">FULL NAME</h4>
-                <input id="name" class="text-center regPatient"/>
+                <input id="inputName" class="text-center regPatient"/>
               </div>
             </div> <!-- Full Name Row End-->
             <div class="row">
               <div class="col-sm-5">
                 <h4 class="altLabel text-center">GENDER</h4>
                 <label class="checkbox text-center">
-                  <input id="gender" style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
+                  <input id="inputGender" style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
                 </label>
             </label>
               </div> <!-- Gender End-->
               <div class="col-sm-2"></div>
               <div class="col-sm-5">
                 <h4 class="altLabel">AGE</h4>
-                <input id="age" type="number" value="40" class="text-center regPatient"/>
+                <input id="inputAge" type="number" value="40" class="text-center regPatient"/>
               </div>
             </div> <!-- Age-->
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label class="altLabel">PRE-EXISTING CONDITION</label>
-                  <select multiple class="text-center form-control registerDropDown" id="">
+                  <label class="altLabel">PRE-EXISTING CONDITION (hold ctrl for multiple values)</label>
+                  <select id="inputConditions" multiple class="text-center form-control registerDropDown" id="">
                     <option value="Diabetes"      class="subOption">Diabetes</option>
                     <option value="Hypertension"  class="subOption">Hypertension</option>
                     <option value="Anxiety"       class="subOption">Anxiety</option>
@@ -201,14 +202,14 @@
             </div> <!-- Conditions-->
             <div class="row">
               <div class="col-sm-12">
-                <h4 id="notes" class="altLabel">NOTES</h4>
+                <h4 id="inputNotes" class="altLabel">NOTES</h4>
                 <input class="text-center regPatient"/>
               </div>
             </div> <!-- Notes-->
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label class="altLabel">CONDITION CATEGORY</label>
+                  <label class="altLabel">Specialities Categories</label>
                   <select class="form-control registerDropDown" id="">
                     <option style="font-weight: 900" selected="selected" disabled></option>
                       <option class="dropHeader" style="font-weight: 900;" disabled>SURGERY</option>
@@ -231,45 +232,24 @@
                   </select>
                 </div>
               </div>
-            </div> <!-- How did you hear about us end -->
+            </div> <!-- categories end -->
             <div class="row">
               <div class="col-sm-12 text-center">
                 <h4 class="altLabel">PRIORITY</h4>
                 <input type="number" class="regPatient"/>
               </div>
-            </div> <!-- How did you hear about us end -->
+            </div>
           </div><!-- Input Fields End -->
           <div class="container">
             <div class="row">
               <div class="col-sm-12 col-12 text-center">
-                <button id="altSubmit" class="btn draw-border">SUBMIT</button>
+                <button id="submitBtn" class="btn draw-border">SUBMIT</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      let rawName = $("#fullName");
-      rawName.focusout(function(){
-        let nameArray = rawName.val().split(" ");
-        if (nameArray.length < 2){
-          alert("Please input both you first & last name.")
-        }
-        let first = nameArray[0]
-      });
-
-      // let radio = 1;
-      // $("#radioButton").on("click", function(){
-      //   if($(this).val) == radio){
-      //     $(this).prop('checked', false);
-      //     radio = 0;
-      //   }else{
-      //     $(this).prop('checked', true);
-      //     radio = 1;
-      //   }
-      // });
-    </script>
     <style>
       /* Variables */
       /* Styles */

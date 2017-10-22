@@ -7,8 +7,9 @@ var sec = 0;
       $(".minutes").html(pad(parseInt(sec/60,10)));
   }, 1000);
 
+// Split name into two values
     let focus = 0;
-    let rawName = jQuery("#fullName");
+    let rawName = $("#inputName");
     //if first time inputting name, check if more than one set of characters is input
     rawName.focusout(function(){
       let nameArray = rawName.val().split(" ");
@@ -21,16 +22,25 @@ var sec = 0;
       nameArray.shift()
       let last = nameArray.toString().replace(",", " ");
 
-      //Upon submit, transfer data over to base level
-      jQuery("#altSubmit").click(function(){
-        jQuery("#firstname").val(first);
-        jQuery("#lastname").val(last);
-        jQuery("#email_address").val(jQuery("#altEmail").val());
-        jQuery("#telephone").val(jQuery("#altPhone").val());
-        jQuery("#password").val(jQuery("#altPassword").val());
-        jQuery("#confirmation").val(jQuery("#altPasswordConfirm").val());
-        jQuery("#company").val(jQuery("#altCompany").val());
-        jQuery("#customer_website_url").val(jQuery("#altURL").val());
+  //Upon submit, transfer data over to base level
+
+      $("#submitBtn").click(function(){
+
+        var data = {
+            title: "Constructing HTML Elements"
+        }
+
+        var template = $("#tutorial-template").html();
+        // html: '<div ...>\n<h1 ...>{{title }}<h1>\n</div>'
+
+        var html = Mustache.render(template, data);
+        $("body").append(html);
+
+        $("#lastname").val(last);
+        $("#gender").val($("#inputGender").val());
+        $("#age").val($("#inputAge").val());
+        $("#conditions").val($("#inputConditions").val());
+        $("#notes").val($("#inputNotes").val());
       });
     });
     // let radio = 1;
