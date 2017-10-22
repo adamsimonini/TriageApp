@@ -21,10 +21,10 @@
     <script src="src.js"></script>
 
     <!-- BOOTSTRAP START-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" src_type="url"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/popper.min.js"></script>
     <!-- BOOTSTRAP END-->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -202,41 +202,45 @@
             </div> <!-- Conditions-->
             <div class="row">
               <div class="col-sm-12">
-                <h4 id="inputNotes" class="altLabel">NOTES</h4>
-                <input class="text-center regPatient"/>
+                <h4 class="altLabel">NOTES</h4>
+                <input id="inputNotes" class="text-center regPatient"/>
               </div>
             </div> <!-- Notes-->
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label class="altLabel">Specialities Categories</label>
-                  <select class="form-control registerDropDown" id="">
+                  <label class="altLabel">Primary Symptom</label>
+                  <select id="inputSymptom" class="form-control registerDropDown">
                     <option style="font-weight: 900" selected="selected" disabled></option>
-                      <option class="dropHeader" style="font-weight: 900;" disabled>SURGERY</option>
-                        <option value="General Surgery" class="subOption">General Surgery</option>
-                        <option value="Suicidal Ideology" class="subOption">Neurosurgery</option>
-                        <option value="Dental" class="subOption">Dental</option>
-                      <option class="dropHeader" style="font-weight: 900" disabled>CARDIOLOGY</option>
-                        <option value="Graphic Art Magazine" class="subOption">Cardiac Arrest</option>
-                        <option value="PrintAction Magazine" class="subOption">Chest Pain</option>
-                      <option class="dropHeader" style="font-weight: 900" disabled>PSYCHOLOGY</option>
-                        <option value="Hallucinations" class="subOption">Hallucinations</option>
-                        <option value="Suicidal Ideology" class="subOption">Suicidal Ideology</option>
-                        <option value="Schizophrenia" class="subOption">Schizophrenia</option>
-                        <!-- <option value="Asphyxiation" class="subOption">Asphyxiation</option>
-                        <option value="SOB" class="subOption">Shortness of Breath</option> -->
-                        <!-- <option value="Caugh" class="subOption">Caugh</option> -->
-                      <option class="dropHeader" style="font-weight: 900" disabled>ORTHOPEDICS</option>
-                          <option value="BloodLoss" class="subOption">Bone fracture</option>
-                          <option value="Lasseration" class="subOption">Fractured skull</option>
+                    <optgroup label="Surgery">
+                      <option value="General Surgery" class="surgery subOption">Internal Bleeding</option>
+                      <option value="Dental" class="surgery subOption">Dental Pain</option>
+                    </optgroup>
+                    <optgroup label="Cardiology">
+                      <option value="Cardiac Arrest" class="subOption cardiology">Cardiac Arrest</option>
+                      <option value="Chest Pain" class="subOption cardiology">Chest Pain</option>
+                    </optgroup>
+                    <optgroup label="Psychology">
+                      <option value="Hallucinations" class="subOption psychology">Hallucinations</option>
+                      <option value="Suicidal Ideology" class="subOption psychology">Suicidal Ideology</option>
+                      <option value="Schizophrenia" class="subOption psychology">Schizophrenia</option>
+                    </optgroup>
+                    <optgroup label="Pulmonology">
+                      <option value="SOB" class="subOption pulmonology">Shortness of Breath</option> -->
+                      <option value="Caugh" class="subOption pulmonology">Cough</option>
+                    </optgroup>
+                    <optgroup label="Orthopedics">
+                      <option value="BloodLoss" class="subOption orthopedics">Appendage bone fracture</option>
+                      <option value="Lasseration" class="subOption orthopedics">Fractured skull</option>
+                    </optgroup>
                   </select>
                 </div>
               </div>
             </div> <!-- categories end -->
             <div class="row">
               <div class="col-sm-12 text-center">
-                <h4 class="altLabel">PRIORITY</h4>
-                <input type="number" class="regPatient"/>
+                <h4 class="altLabel">PRIORITY OVERRIDE</h4>
+                <input id="inputPriority" type="number" class="regPatient"/>
               </div>
             </div>
           </div><!-- Input Fields End -->
