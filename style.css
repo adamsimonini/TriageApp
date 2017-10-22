@@ -1,8 +1,32 @@
+label p{
+  margin: 0;
+  width: 30%;
+  display: inline;
+}
+.block div{
+  padding: 0 !important;
+}
+.block{
+  padding: 0 !important;
+}
+.medicalSpecialty{
+  font-size: calc(20px + 0.1vw);
+}
+.patientQueue{
+  padding: 0 !important;
+  border: 3px solid Purple;
+}
+.categoryCol{
+  border: 3px solid black;
+}
 .dropHeader{
   color: #9ec746;
 }
+.doctorIcon{
+  max-width: 20px;
+}
 #masterContainer{
-  background-color: red;
+  background-color: pink;
   padding: 0.5vw 1% 0.5vw 1% !important;
   margin: 0 auto;
 }
@@ -100,7 +124,7 @@ body{
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(225, 225, 225, 0);
+  background: rgba(225, 225, 225, 0.95);
   z-index: 99999;
   opacity:0;
   -webkit-transition: opacity 400ms ease-in;
@@ -210,8 +234,9 @@ letter-spacing: 0.05rem;
 outline: none;
 }
 #widthDiv{
-width: 60%;
+width: 80%;
 margin-top: 10px;
+background-color: transparent !important;
 }
 /*PHONES ONLY*/
 @media only screen and (max-width: 767px) {
@@ -222,3 +247,4 @@ margin-top: 10px;
   font-size: 14px;
   min-width: 140%;
 }
+/*ACCORDIAN STYLE FLEX BOX*/

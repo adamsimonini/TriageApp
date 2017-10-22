@@ -8,7 +8,7 @@
     <meta name="description" content="">
 
     <title> Triage </title>
-    <link rel="icon" href="images.heartbeat.svg" type="image/x-icon">
+    <link rel="icon" href="images/medicalSign.svg" type="image/x-icon">
 
     <!-- JQUERY -->
     <script
@@ -22,9 +22,12 @@
 
     <!-- BOOTSTRAP START-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" src_type="url"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" src_type="url"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/popper.min.js"></script>
     <!-- BOOTSTRAP END-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -36,13 +39,13 @@
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
     <!-- CUSTOM MOBILE CSS -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
       <div class="row">
         <div class="col-sm-6 offset-sm-2 text-right">
-            <h1>Triage Automation</h1>
+            <h1>Triage Assistant</h1>
         </div>
         <div class="col-sm-2 text-left">
           <a href="#modal"><img style="max-width: 60px" src="images/plus.svg"/></a>
@@ -50,31 +53,103 @@
       </div>
     </div>
 
-  <div id="masterContainer" class="row text-center"> <!-- MASTER CONTAINER START -->
+  <div id="masterContainer" class="row text-center"> <!-- MASTER CONTAINER -->
     <div class="col-sm-12">
-      <div id="masterRow" class="row" style="margin: 0">
-        <div class="col-sm-2 categoryCol">
-          A
+      <div id="masterRow" class="row" style="margin: 0"> <!-- MASTER ROW -->
+        <div class="col-lg-2 categoryCol">
+          <h4 class="medicalSpecialty" style="min-height: 30px">SURGERY</h4>
+          <div class="row text-center"> <!-- surgery doctors -->
+            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
+            <div class="col-12">Dr. Hart</div>
+            <div class="col-12">Dr. Adams</div>
+            <div class="container">
+
+            </div>
+            <div class="row patientQueue"> <!-- patient -->
+              <div class="block">
+                <div>
+                  <input type="radio" name="item" id="item-one" hidden />
+                  <label for="item-one"><p class="priorityNumber">8</p><p class="lastName"> Anderson </p><span class="minutes"></span>:<span class="seconds"></span></label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-two" hidden />
+                  <label for="item-two">Item 2</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-three" hidden />
+                  <label for="item-three">Item 3</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-four" hidden />
+                  <label for="item-four">Item 4</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="radio" name="item" id="item-five" hidden />
+                  <label for="item-five">Item 5</label>
+                  <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis praesentium, perspiciatis optio repellat quos maiores cum, tempore veniam ratione delectus quae ex laudantium modi. Quam sequi illo laudantium, harum odio.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-2 categoryCol">
-          B
+        <div class="col-lg-2 categoryCol">
+          <h4 class="medicalSpecialty" style="min-height: 30px">CARDIOLOGY</h4>
+          <div class="row text-center"> <!-- cardiology doctors -->
+            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
+            <div class="col-12">Dr. Baker</div>
+            <div class="col-12">Dr. Lee</div>
+          </div>
         </div>
-        <div class="col-sm-2 categoryCol">
-          C
+        <div class="col-lg-2 categoryCol">
+          <h4 class="medicalSpecialty" style="min-height: 30px">NEUROLOGY</h4>
+          <div class="row text-center"> <!-- neurology doctors -->
+            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
+            <div class="col-12">Dr. McCloud</div>
+            <div class="col-12">Dr. Meshkat</div>
+          </div>
         </div>
-        <div class="col-sm-2 categoryCol">
-          D
+        <div class="col-lg-2 categoryCol">
+          <h4 class="medicalSpecialty" style="min-height: 30px">PSYCHIATRY</h4>
+          <div class="row text-center"> <!-- psychiatry doctors -->
+            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
+            <div class="col-12">Dr. Dalmia</div>
+            <div class="col-12">Dr. Wang</div>
+          </div>
         </div>
-        <div class="col-sm-2 categoryCol">
-          E
+        <div class="col-lg-2 categoryCol">
+          <h4 class="medicalSpecialty" style="min-height: 30px">ORTHOPAEDICS</h4>
+          <div class="row text-center"> <!-- orthopaedic doctors -->
+            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
+            <div class="col-12">Dr. Andwerson</div>
+            <div class="col-12">Dr. Park</div>
+          </div>
         </div>
-        <div class="col-sm-2 categoryCol">
-          F
+        <div class="col-lg-2 categoryCol">
+          <h4 class="medicalSpecialty" style="min-height: 30px">PULMONOLOGY</h4>
+          <div class="row text-center"> <!-- pulmonology doctors -->
+            <!-- <image class="doctorIcon col-5" src="images/doctor.svg"></image> -->
+            <div class="col-12">Dr. Rizzuti</div>
+            <div class="col-12">Dr. Guy</div>
+          </div>
         </div>
       </div>
     </div>
   </div> <!-- MASTER CONTAINER END -->
-
+<!-- MONDAL START -->
     <div id="modal" class="modalDialog modalList fixed-top">
       <div id="widthDiv" style="width: 90%">
         <a id="modalCloseBtn" href="#close" title="Close" class="modalClose">X</a>
@@ -93,39 +168,48 @@
             <div class="row">
               <div class="col-sm-12">
                 <h4 class="altLabel">FULL NAME</h4>
-                <input id="name" class="regPatient"/>
+                <input id="inputName" class="text-center regPatient"/>
               </div>
             </div> <!-- Full Name Row End-->
             <div class="row">
               <div class="col-sm-5">
                 <h4 class="altLabel text-center">GENDER</h4>
                 <label class="checkbox text-center">
-                  <input style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
+                  <input id="inputGender" style="width: 100%" type="checkbox" data-on="F" data-off="M" data-onstyle="danger" data-offstyle="primary" data-toggle="toggle">
                 </label>
             </label>
               </div> <!-- Gender End-->
               <div class="col-sm-2"></div>
               <div class="col-sm-5">
                 <h4 class="altLabel">AGE</h4>
-                <input id="phone" type="number" value="40" class="regPatient"/>
+                <input id="inputAge" type="number" value="40" class="text-center regPatient"/>
               </div>
             </div> <!-- Age-->
             <div class="row">
               <div class="col-sm-12">
-                <h4 class="altLabel">PRE-EXISTING CONDITIONS</h4>
-                <input id="notes" class="regPatient"/>
+                <div class="form-group">
+                  <label class="altLabel">PRE-EXISTING CONDITION (hold ctrl for multiple values)</label>
+                  <select id="inputConditions" multiple class="text-center form-control registerDropDown" id="">
+                    <option value="Diabetes"      class="subOption">Diabetes</option>
+                    <option value="Hypertension"  class="subOption">Hypertension</option>
+                    <option value="Anxiety"       class="subOption">Anxiety</option>
+                    <option value="Depression"    class="subOption">Depression</option>
+                    <option value="Asthma"        class="subOption">Asthma</option>
+                    <option value="Obesity"       class="subOption">Obesity</option>
+                  </select>
+                </div>
               </div>
             </div> <!-- Conditions-->
             <div class="row">
               <div class="col-sm-12">
-                <h4 id="website" class="altLabel">NOTES</h4>
-                <input class="regPatient"/>
+                <h4 id="inputNotes" class="altLabel">NOTES</h4>
+                <input class="text-center regPatient"/>
               </div>
             </div> <!-- Notes-->
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label class="altLabel">CONDITION CATEGORY</label>
+                  <label class="altLabel">Specialities Categories</label>
                   <select class="form-control registerDropDown" id="">
                     <option style="font-weight: 900" selected="selected" disabled></option>
                       <option class="dropHeader" style="font-weight: 900;" disabled>SURGERY</option>
@@ -148,42 +232,159 @@
                   </select>
                 </div>
               </div>
-            </div> <!-- How did you hear about us end -->
+            </div> <!-- categories end -->
             <div class="row">
               <div class="col-sm-12 text-center">
+                <h4 class="altLabel">PRIORITY</h4>
+                <input type="number" class="regPatient"/>
               </div>
-            </div> <!-- How did you hear about us end -->
+            </div>
           </div><!-- Input Fields End -->
           <div class="container">
             <div class="row">
               <div class="col-sm-12 col-12 text-center">
-                <button id="altSubmit" class="btn draw-border">SUBMIT</button>
+                <button id="submitBtn" class="btn draw-border">SUBMIT</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      let rawName = $("#fullName");
-      rawName.focusout(function(){
-        let nameArray = rawName.val().split(" ");
-        if (nameArray.length < 2){
-          alert("Please input both you first & last name.")
-        }
-        let first = nameArray[0]
-      });
+    <style>
+      /* Variables */
+      /* Styles */
+      * {
+        box-sizing: border-box;
+      }
 
-      // let radio = 1;
-      // $("#radioButton").on("click", function(){
-      //   if($(this).val) == radio){
-      //     $(this).prop('checked', false);
-      //     radio = 0;
-      //   }else{
-      //     $(this).prop('checked', true);
-      //     radio = 1;
-      //   }
-      // });
-    </script>
+      body, .block > div, .details a.follow strong {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        font-family: Sans-Serif;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        line-height: 16px;
+        color: gray;
+      }
+
+      .block {
+        max-width: 400px;
+        width: 100%;
+        height: 100%;
+        float: left;
+        padding: 15px;
+        z-index: 10;
+        background-color: white;
+        overflow: hidden;
+      }
+      @media screen and (max-width: 599px) {
+        .block {
+          max-width: 100%;
+        }
+      }
+      .block > div {
+        display: block;
+        position: relative;
+        padding: 0 0 0 35px;
+        border-bottom: 1px solid white;
+        background-color: #e6e6e6;
+        color: black;
+      }
+
+      .block > div input + label {
+        cursor: pointer;
+        display: block;
+        padding: 7.5px 15px;
+        background-color: #a2c0c6;
+        transition: background-color 0.25s ease-in-out 0.5s, color 0.25s ease-in-out 0.5s;
+        color: black;
+      }
+      .block > div input ~ div {
+        visibility: hidden;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.25s, padding 0s ease-in-out 0s;
+      }
+      .block > div input ~ div p {
+        padding: 0 15px;
+      }
+      .block > div input:checked + label {
+        background-color: #739fa8;
+        transition: background-color 0s ease-in-out 0s;
+        color: black;
+      }
+      .block > div input:checked ~ div {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        max-height: 200px;
+        padding: 15px 0;
+        transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.5s, padding 0s ease-in-out 0s;
+      }
+
+      .details {
+        width: calc(100% - 400px - 15px);
+        float: right;
+        margin: 15px 15px 0 0;
+        padding: 15px;
+        background-color: #3399ff;
+      }
+      @media screen and (max-width: 599px) {
+        .details {
+          float: left;
+          width: calc(100% - 30px);
+          margin: 15px;
+        }
+      }
+      .details * {
+        display: inline-block;
+        margin: 7.5px 0;
+        line-height: 20px;
+        color: white;
+      }
+      .details h1 {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 40px;
+        margin: 0;
+        clear: both;
+      }
+      .details a {
+        clear: both;
+        font-family: "FontAwesome", Sans-Serif;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      .details a.follow {
+        float: left;
+        font-weight: bold;
+        background-color: #333333;
+        margin: 15px 0 0;
+        padding: 7.5px 15px;
+        cursor: pointer;
+      }
+      .details a.follow:before {
+        margin: 0 7.5px 0 0;
+      }
+      .details a.follow strong {
+        color: #99ccff;
+      }
+      .details a.follow:hover {
+        background-color: #66b3ff;
+      }
+      .details a.follow:hover strong {
+        color: #4d4d4d;
+      }
+    </style>
+
   </body>
 </html>
